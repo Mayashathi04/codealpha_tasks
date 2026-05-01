@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maya's Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="splash-screen">
+        <h1 class="welcome-text">Welcome to Maya's Music Player</h1>
+        <button id="start-btn" class="hidden">Start Music</button>
+    </div>
+
+    <div class="container blurred">
+        <div class="music-player">
+            <nav>
+                <div class="circle"><i class="fa-solid fa-angle-left"></i></div>
+                <div class="circle"><i class="fa-solid fa-bars"></i></div>
+            </nav>
+
+            <div class="song-display">
+                <img src="./thumb/Pretty Little Baby.jpeg" id="thumbnail" class="song-img">
+                <h1 id="title">Song Title</h1>
+                <p id="artist">Artist Name</p>
+            </div>
+
+            <audio id="song"></audio>
+
+            <input type="range" value="0" id="progress">
+            <div class="time-stamps">
+                <span id="current-time">00:00</span>
+                <span id="duration-time">00:00</span>
+            </div>
+
+            <div class="volume-box">
+                <i class="fa-solid fa-volume-low"></i>
+                <input type="range" id="volume" min="0" max="1" step="0.1" value="1">
+                <i class="fa-solid fa-volume-high"></i>
+            </div>
+
+            <div class="controls">
+                <div onclick="prevSong()"><i class="fa-solid fa-backward"></i></div>
+                <div onclick="playPause()" class="play-btn">
+                    <i class="fa-solid fa-play" id="ctrlIcon"></i>
+                </div>
+                <div onclick="nextSong()"><i class="fa-solid fa-forward"></i></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
