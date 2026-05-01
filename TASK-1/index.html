@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 Wonders of the World Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="gallery-container">
+    <h1 class="title">7 Wonders of the World</h1>
+    
+    <div class="filters">
+        <button class="active">ALL</button>
+        <button>ANCIENT</button>
+        <button>MODERN</button>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+            <img src="image/THE GREAT WALL OF CHINA.jpeg" alt="Great Wall of China">
+            <div class="glass-overlay">
+                <span class="tag">MODERN</span>
+                <h3>Great Wall of China</h3>
+                <p>Built over centuries to protect Chinese states against invasions, it stretches over 13,000 miles and is a masterpiece of defensive architecture.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="image/PETRA-JORDAN.jpeg" alt="Petra">
+            <div class="glass-overlay">
+                <span class="tag">ANCIENT</span>
+                <h3>Petra</h3>
+                <p>An ancient city in Jordan carved directly into vibrant red sandstone cliffs, it served as a major trading hub for the Nabataean Empire.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="image/THE COLOSSEUM-ITALY.jpeg" alt="Colosseum">
+            <div class="glass-overlay">
+                <span class="tag">MODERN</span>
+                <h3>Colosseum</h3>
+                <p>Located in Rome, this massive stone amphitheater was opened in 80 AD and hosted gladiatorial contests for audiences of over 50,000 people.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="image/Chichén Itzá - Mexico.jpeg" alt="Chichen Itza">
+            <div class="glass-overlay">
+                <span class="tag">MODERN</span>
+                <h3>Chichen Itza</h3>
+                <p>A powerful Maya city in Mexico, it features the iconic El Castillo pyramid designed to reflect the Maya calendar and astronomical alignments.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="image/MACHU PICCHU-PERU.jpeg" alt="Machu Picchu">
+            <div class="glass-overlay">
+                <span class="tag">MODERN</span>
+                <h3>Machu Picchu</h3>
+                <p>Perched high in the Andes Mountains of Peru, this 15th-century Inca citadel was built with dry-stone walls and remained hidden for centuries.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="image/THE TAJ MAHAL.jpeg" alt="Taj Mahal">
+            <div class="glass-overlay">
+                <span class="tag">MODERN</span>
+                <h3>Taj Mahal</h3>
+                <p>This stunning white marble mausoleum in Agra, India, was built by Emperor Shah Jahan as a symbol of eternal love for his wife Mumtaz Mahal.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="image/CHRIST THE REDEEMER-BRAZIL.jpeg" alt="Christ the Redeemer">
+            <div class="glass-overlay">
+                <span class="tag">MODERN</span>
+                <h3>Christ the Redeemer</h3>
+                <p>Standing 98 feet tall atop Mount Corcovado in Brazil, this Art Deco statue overlooks Rio de Janeiro as a symbol of peace and welcoming.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="fullScreenOverlay" class="overlay">
+    <span class="close-btn">&times;</span>
+    <div class="full-screen-content">
+        <img id="fullScreenImage" src="" alt="Full Screen View">
+        <div class="image-info">
+            <h2 id="fullScreenTitle"></h2>
+            <p id="fullScreenHistory"></p>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

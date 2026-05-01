@@ -1,0 +1,147 @@
+body {
+    background: #0b0e14;
+    font-family: 'Segoe UI', sans-serif;
+    color: #ffffff;
+    margin: 0;
+}
+
+.gallery-container {
+    padding: 40px;
+    text-align: center;
+}
+
+.filters button {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ccc;
+    padding: 8px 25px;
+    margin: 0 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filters button.active {
+    background: #7a42f4;
+    color: white;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.card {
+    position: relative;
+    height: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease;
+}
+
+.glass-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.tag {
+    background: #7a42f4;
+    font-size: 0.7rem;
+    padding: 3px 12px;
+    border-radius: 4px;
+}
+
+/* Lightbox Styles */
+.overlay {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    justify-content: center;
+    align-items: center;
+}
+
+.full-screen-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 90%;
+}
+
+.overlay img {
+    max-width: 100%;
+    max-height: 60vh;
+    border-radius: 10px;
+}
+
+.image-info {
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    max-width: 600px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Ensure the full image fits in the card */
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Change to 'contain' if you want no cropping at all */
+    transition: 0.5s ease;
+}
+
+/* Hide the history paragraph in the grid view */
+.card .glass-overlay p {
+    display: none; 
+}
+
+/* Style the overlay to be smaller in the grid */
+.glass-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.4); /* Darker, thinner bar at the bottom */
+    backdrop-filter: blur(5px);
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.card h3 {
+    margin: 5px 0 0 0;
+    font-size: 1rem;
+}
